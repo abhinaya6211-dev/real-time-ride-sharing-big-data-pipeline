@@ -62,7 +62,7 @@ nyc-taxi-business-intelligence-pipeline/
 ├── summary_payment_analysis.csv         # Revenue & tipping behavior by payment type
 ├── summary_top_corridors.csv            # Top pickup → dropoff routes & corridors
 └── README.md                            # This documentation file
-
+```
 
 ### How to Reproduce
 1. **Prerequisites**
