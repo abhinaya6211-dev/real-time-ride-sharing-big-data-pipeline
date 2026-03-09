@@ -1,3 +1,50 @@
+-- Create database and schema
+-- Setup
+CREATE DATABASE nyc_taxi_db;
+USE DATABASE nyc_taxi_db;
+CREATE SCHEMA taxi_analytics;
+USE SCHEMA taxi_analytics;
+
+-- Hourly KPIs table
+CREATE TABLE hourly_kpis (
+    pickup_hour INT,
+    trip_count INT,
+    avg_fare FLOAT,
+    total_revenue FLOAT,
+    avg_distance FLOAT,
+    avg_speed_mph FLOAT,
+    is_peak_hour STRING
+);
+
+-- Zone KPIs table
+CREATE TABLE zone_kpis (
+    pulocationid INT,
+    trip_count INT,
+    total_revenue FLOAT,
+    avg_fare_per_mile FLOAT,
+    avg_distance FLOAT
+);
+
+-- Peak vs Off-Peak table
+CREATE TABLE peak_analysis (
+    is_peak_hour STRING,
+    is_weekend STRING,
+    trip_count INT,
+    avg_fare FLOAT,
+    total_revenue FLOAT,
+    avg_duration_min FLOAT
+);
+
+-- Payment Analysis table
+CREATE TABLE payment_analysis (
+    payment_type INT,
+    trip_count INT,
+    avg_fare_per_mile FLOAT,
+    avg_tip FLOAT,
+    total_revenue FLOAT
+);
+
+
 USE DATABASE nyc_taxi_db;
 USE SCHEMA taxi_analytics;
 
