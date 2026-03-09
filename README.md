@@ -49,12 +49,19 @@ Power BI Dashboard (geospatial, time-series, KPIs, peak/off-peak comparison)
 
 ### Repository Structure
 
+### Repository Structure
+
+```text
 nyc-taxi-business-intelligence-pipeline/
-├── nyc_taxi_pipeline.ipynb         # Full PySpark + Snowflake pipeline
-├── analytics.sql                   # Standalone advanced Snowflake queries
-├── dashboard_preview.png           # Power BI dashboard screenshot
-├── summary_*.csv                   # 5 KPI summary tables for loading/visualization
-└── README.md
+├── nyc_taxi_pipeline.ipynb              # Full PySpark ETL + Spark SQL + Snowflake integration pipeline
+├── analytics.sql                        # Standalone advanced Snowflake queries (CTEs, window functions, ranking, etc.)
+├── dashboard_preview.png                # Power BI dashboard screenshot (multi-panel view)
+├── summary_hourly_kpis.csv              # Hourly KPIs: trips, revenue, avg fare by pickup hour
+├── summary_zone_kpis.csv                # Zone-level KPIs: top revenue zones, trips, avg fare/mile
+├── summary_peak_offpeak.csv             # Peak vs Off-Peak × Weekday/Weekend breakdown
+├── summary_payment_analysis.csv         # Revenue & tipping behavior by payment type
+├── summary_top_corridors.csv            # Top pickup → dropoff routes & corridors
+└── README.md                            # This documentation file
 
 
 ### How to Reproduce
@@ -83,6 +90,5 @@ nyc-taxi-business-intelligence-pipeline/
 
 ### Author
 #### Abhinaya Ragipani
-MS Data Sciences & Applications – University at Buffalo, SUNY (GPA: 3.93)
-abhinaya6211@gmail.com | LinkedIn | GitHub
-**Dataset Source:** NYC Taxi & Limousine Commission – Yellow Taxi Trip Records (Jan 2023)
+- MS Data Sciences & Applications – University at Buffalo, SUNY (GPA: 3.93)
+- **Dataset Source:** NYC Taxi & Limousine Commission – Yellow Taxi Trip Records (Jan 2023)
