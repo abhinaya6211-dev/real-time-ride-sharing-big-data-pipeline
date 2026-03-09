@@ -1,0 +1,5 @@
+is_peak_hour,is_weekend,trip_count,avg_fare,total_revenue,avg_duration_min
+Off-Peak,Weekday,1362005,19.06,31438134.08,16.16
+Off-Peak,Weekend,628576,18.48,14015614.09,15.27
+Peak,Weekday,697109,17.45,14850303.76,15.57
+Peak,Weekend,196490,19.0,4501477.33,15.55
